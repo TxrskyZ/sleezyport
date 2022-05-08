@@ -31,7 +31,8 @@ end
 findGoals()
 local UIS = game:GetService('UserInputService')
 UIS.InputBegan:connect(function(Input, GPE)
-   if not GPE and Input.KeyCode == Enum.KeyCode.X then
+   if not GPE and Input.KeyCode == Enum.KeyCode.Space then
+       wait(0.3)
        local lookthat = findClosestPart(game.Players.LocalPlayer.Character.Torso.Position)
        Holding = true
        repeat
@@ -50,7 +51,7 @@ game.workspace[game.Players.LocalPlayer.Name].Ball.CSC:FireServer(argument1,argu
 end)
 
 UIS.InputEnded:connect(function(Input, GPE)
-   if not GPE and Input.KeyCode == Enum.KeyCode.X then
+   if not GPE and Input.KeyCode == Enum.KeyCode.Space then
        Holding = false
    end
 end)
