@@ -2,7 +2,7 @@ local Camera = workspace.CurrentCamera
 Holding = false
 function findGoals()
    for i,v in pairs(game.workspace:GetDescendants()) do
-       if v.Name == "Net" then
+       if v.Name == "C__Net" then
                local aa = "Lock"
                v.Parent = game.Workspace
                v.Name = aa
